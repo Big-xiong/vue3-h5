@@ -1,0 +1,15 @@
+h2 {
+  padding-top: 10px;
+}
+
+.table {
+  width: 70%;
+  margin: 30px auto;
+}
+
+.table td {
+  text-align: center;
+  padding: 8px 15px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.03);
+}
+/*# sourceMappingURL=index.css.map */

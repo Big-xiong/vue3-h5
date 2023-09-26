@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 14</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.600000 0 0 0 0 0.600000 0 0 0 0 0.600000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+        <path class="svg-money-arrow" d="M2.54487125,2.39313353 C2.48003377,2.45616997 2.39204004,2.51470381 2.30867756,2.4966934 C2.22531508,2.51020121 2.14658385,2.44716477 2.08174637,2.39313353 L0.0764156063,0.434501196 C-0.0254718688,0.335443929 -0.0254718687,0.173350218 0.0764156063,0.0742929506 C0.178303081,-0.0247643169 0.345028041,-0.0247643168 0.446915516,0.0742929506 L2.31330881,1.93837062 L4.18433335,0.0742929506 C4.28622083,-0.0247643169 4.45294579,-0.0247643168 4.55483326,0.0742929506 C4.65672074,0.173350218 4.65672074,0.335443928 4.55483326,0.434501196 L2.54487125,2.39313353 Z" id="path-2"></path>
+    </defs>
+    <g id="一级页面" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="我的-已登录备份-3" transform="translate(-63.000000, -195.000000)">
+            <g id="编组-15" transform="translate(15.000000, 137.000000)">
+                <g id="编组-5" transform="translate(0.000000, 33.000000)">
+                    <g id="编组-14" transform="translate(48.000000, 25.000000)">
+                        <circle id="椭圆形" class="svg-money-arrow-right" stroke-width="0.6" cx="5" cy="5" r="4.2"></circle>
+                        <g id="箭头备份-2">
+                            <g transform="translate(3.608896, 1.396976)">
+                                <g transform="translate(1.750000, 3.357143) rotate(-90.000000) translate(-1.750000, -3.357143) translate(-0.750000, 1.857143)">
+                                    <mask id="mask-3" fill="white">
+                                        <use xlink:href="#path-2"></use>
+                                    </mask>
+                                    <use id="蒙版" class="svg-money-arrow-right" stroke-width="0.3" xlink:href="#path-2"></use>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

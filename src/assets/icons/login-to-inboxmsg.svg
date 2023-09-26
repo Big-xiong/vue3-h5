@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="22px" viewBox="0 0 20 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>-mockplus-</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="一级页面" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="我的-未登录" transform="translate(-340.000000, -52.000000)">
+            <g id="#icon/shezhi" transform="translate(340.000000, 52.000000)" filter="url(#filter-1)">
+                <g transform="translate(0.000000, 2.000000)" id="youxiang" stroke="#C8A77F" stroke-width="2">
+                    <path d="M17.7863896,1 C18.1022016,1 18.3740935,1.17937767 18.5765749,1.4270612 C18.8448606,1.75523936 19,2.21105129 19,2.70777927 L19,2.70777927 L19,15.2922207 C19,15.7889487 18.8448606,16.2447606 18.5765749,16.5729388 C18.3740935,16.8206223 18.1022016,17 17.7863896,17 L17.7863896,17 L2.21361041,17 C1.89779838,17 1.62590651,16.8206223 1.42342514,16.5729388 C1.15513939,16.2447606 1,15.7889487 1,15.2922207 L1,15.2922207 L1,2.70777927 C1,2.21105129 1.15513939,1.75523936 1.42342514,1.4270612 C1.62590651,1.17937767 1.89779838,1 2.21361041,1 L2.21361041,1 Z" id="形状" fill-rule="nonzero"></path>
+                    <polyline id="路径-6" stroke-linecap="round" stroke-linejoin="round" points="5.45454545 7 10 10 14.5454545 7"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

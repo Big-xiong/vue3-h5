@@ -1,0 +1,109 @@
+:root {
+  .dark {
+    --app-bg-color: #18171d;
+    --dark-bg-color-18171D: #18171d;
+    --card-bg-color: #222129;
+    --dark-card-bg-color: #222129;
+    --dark-fff: #fff;
+    --dark-border-color-2D2B36: #2d2b36;
+    --dark-border-color-3F3D4B: #3f3d4b;
+    --dark-31303C: #31303c;
+    --dark-34323f: #34323f;
+    --dark-444150: #444150;
+    --dark-4E4C5D: #4e4c5d;
+    --dark-d8d8d8: #d8d8d8;
+    --dark-1b1a20: #1b1a20;
+    --dark-2e2d37: #2e2d37;
+    --dark-393845: #393845;
+    --dark-disabled-bg: #302e39;
+    --dark-disabled-font: #464453;
+    --dark-000: #000;
+    --dark-111016: #111016;
+    --dark-bg-color-33323E: #33323e;
+    --dark-chat-input-141319: #141319;
+    --svg-color: #d5d9e5;
+    --dark-gradient-light-bg-color: linear-gradient(270deg, #2b2a34 0%, #3c3b45 100%);
+    --bg-skeleton-dark: #222129;
+    --bg-skeleton-light: #33323e;
+    --dark-rule-item: linear-gradient(270deg, #393842 0%, #222129 49%, #3c3b45 100%);
+    --dark-rule-middle: #43424B;
+
+    .sport-filter {
+      --svg-color: var(--dark-fff);
+    }
+    .sport-main-wrap,
+    .sport-focus-main-wrap {
+      h4 {
+        color: var(--dark-fff);
+      }
+      .van-cell {
+        background-color: var(--card-bg-color);
+        &.sport-card-wrap {
+          border: 2px solid var(--dark-border-color-3F3D4B);
+        }
+      }
+    }
+    .van-nav-bar .van-icon {
+      color: var(--dark-fff, --font-color-0A0A0A);
+    }
+
+    .van-picker-column__item {
+      color: var(--dar-fff);
+    }
+
+    .van-datetime-picker {
+      background-color: var(--card-bg-color, var(--bg-color-fff));
+
+      .van-picker__title,
+      .van-picker__cancel {
+        color: var(--dark-fff);
+      }
+      .van-picker__confirm {
+        color: var(--theme-color);
+      }
+      .van-picker-column__item {
+        color: var(--dark-fff);
+      }
+      .van-picker__mask {
+        background-image: linear-gradient(180deg, rgba(34, 33, 41, 0.9), rgba(34, 33, 41, 0.4)),
+          linear-gradient(0deg, rgba(34, 33, 41, 0.9), rgba(34, 33, 41, 0.4));
+      }
+
+      .van-picker__frame::after {
+        border-width: 0;
+      }
+    }
+    .sport-filter-wrap {
+      border: 2px solid var(--dark-border-color-3F3D4B);
+    }
+    .sport-nav-bar-wrap {
+      .van-tabbar,
+      .van-tabbar-item--active {
+        background-color: var(--card-bg-color);
+      }
+      .van-hairline--top-bottom::after {
+        border-width: 0;
+      }
+    }
+    .sport-focus-wrap,
+    .sport-rules-wrap {
+      .van-tabs__nav {
+        background-color: var(--card-bg-color);
+      }
+    }
+    .sport-search-wrap {
+      .van-cell-group {
+        background: var(--card-bg-color);
+        border-radius: 0;
+      }
+    }
+    .sport-search-res-wrap {
+      .van-tabs__nav {
+        background: var(--card-bg-color);
+      }
+    }
+    .more-wrap main > div ul {
+      background: transparent;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="16px" viewBox="0 0 7 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>三角形</title>
+    <g id="一级页面" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g id="赛况" transform="translate(-32.000000, -553.000000)" >
+            <g id="编组-10" transform="translate(29.500000, 518.000000)">
+                <path d="M7.98963727,41.8633419 L13,47.5 L13,47.5 L-3,47.5 L2.01036273,41.8633419 C3.47803479,40.2122109 6.00632428,40.0634879 7.65745536,41.53116 C7.77459479,41.635284 7.88551333,41.7462025 7.98963727,41.8633419 Z" id="三角形" transform="translate(5.000000, 43.000000) rotate(-90.000000) translate(-5.000000, -43.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

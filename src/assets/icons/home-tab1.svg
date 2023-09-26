@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>-mockplus-</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.000000 0 0 0 0 0.627451 0 0 0 0 0.690196 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#C8A77F" offset="0%"></stop>
+            <stop stop-color="#AB8A61" offset="99.329603%"></stop>
+        </linearGradient>
+        <path d="M14,16.37625 L6,16.37625 C5.448,16.37625 5,15.92925 5,15.37625 C5,14.82325 5.448,14.37625 6,14.37625 L14,14.37625 C14.553,14.37625 15,14.82325 15,15.37625 C15,15.92925 14.553,16.37625 14,16.37625 M19.294,6.64225 L12.589,0.95025 C11.096,-0.31675 8.904,-0.31675 7.412,0.95025 L0.706,6.64225 C0.258,7.02225 0,7.57925 0,8.16725 L0,18.75325 C0,19.85725 0.896,20.75325 2,20.75325 L18,20.75325 C19.104,20.75325 20,19.85725 20,18.75325 L20,8.16725 C20,7.57925 19.742,7.02225 19.294,6.64225" id="path-3"></path>
+    </defs>
+    <g id="首页" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g id="首页_德晋贵宾厅_热门推荐" transform="translate(-26.000000, -1081.000000)">
+            <g id="bottom" transform="translate(0.000000, 1073.000000)">
+                <g id="首页" transform="translate(25.000000, 8.000000)">
+                    <g id="#icon/yinghangka" transform="translate(1.000000, 0.000000)">
+                        <g transform="translate(1.000000, 1.000000)">
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <use id="蒙版" xlink:href="#path-3"></use>
+                            <g id="-mockplus-" mask="url(#mask-4)" opacity="0">
+                                <g transform="translate(-1.000000, -1.000000)">
+                                    <rect id="矩形备份-3-copy" x="0" y="0" width="22" height="22"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

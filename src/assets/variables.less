@@ -1,0 +1,84 @@
+@import './style/iconfont.css';
+@import './style/iconfontCenter.css';
+@import 'vant/lib/index.css';
+
+@--font-family: '';
+
+body,
+html {
+  height: 100%;
+  box-sizing: border-box;
+  font-family: @--font-family;
+}
+
+.van-nav-bar {
+  order: -1;
+
+  &::after {
+    content: none;
+  }
+
+  .van-nav-bar__right {
+    color: var(--font-color-fff);
+  }
+}
+
+.van-nav-bar__content {
+  background-color: var(--bg-color-24c29a);
+
+  .van-nav-bar__left {
+    .van-icon {
+      color: var(--font-color-fff);
+    }
+  }
+}
+.agent-layout .agent-landing-wrap .van-nav-bar__left {
+  .van-icon {
+    color: var(--font-color-fff) !important;
+  }
+}
+.van-popup {
+  .van-cell {
+    background-color: transparent;
+  }
+  .van-field__control {
+    color: var(--dark-fff, var(--font-color-cccccc));
+  }
+
+  &--bottom {
+    .popup-title-wrap,.van-picker__toolbar {
+      background-color: var(--popbot-title-bg-color);
+    }
+
+    .van-picker__toolbar {
+      border-bottom: solid 2px var(--dark-333, var(--picker-toolbar-border-color));
+
+      button {
+        font-size: 32px;
+      }
+
+      .van-picker__cancel {
+        color: var(--picker-cancle-action-color)
+      }
+      .van-picker__confirm {
+        color: var(--picker-confirm-action-color)
+      }
+
+      .van-picker__title {
+        color: var(--font-color-333333)
+      }
+    }
+  }
+}
+
+.van-button__content {
+  // white-space: break-spaces;
+}
+
+input::-webkit-input-placeholder {
+  white-space: normal !important;
+}
+
+.van-hairline--top-bottom::after, .van-hairline-unset--top-bottom::after {
+  border-width: 0;
+}

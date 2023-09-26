@@ -1,0 +1,3 @@
+[submodule "src/current_project"]
+	path = src/current_project
+	url = git@github.com:j33app2/overseas-h5-common.git

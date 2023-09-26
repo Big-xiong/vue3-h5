@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>-mockplus-</title>
+    <defs>
+        <path d="M15.9961,11 C18.2081,11 20.0001,12.792 20.0001,15.004 L20.0001,15.004 L20.0001,17.996 C20.0001,20.208 18.2081,22 15.9961,22 L15.9961,22 L4.0041,22 C1.7921,22 0.0001,20.208 0.0001,17.996 L0.0001,17.996 L0.0001,15.004 C0.0001,12.792 1.7921,11 4.0041,11 L4.0041,11 Z M10.25,0 C13.012,0 15.25,2.239 15.25,5 C15.25,7.761 13.012,10 10.25,10 C7.488,10 5.25,7.761 5.25,5 C5.25,2.239 7.488,0 10.25,0 Z" id="path-1"></path>
+    </defs>
+    <g id="首页" stroke="none" stroke-width="1">
+        <g id="首页_德晋贵宾厅_热门推荐" transform="translate(-328.000000, -1067.000000)">
+            <g id="编组-3" transform="translate(0.000000, 994.000000)">
+                <g id="-mockplus-" transform="translate(327.000000, 73.000000)">
+                    <g id="-mockplus-" transform="translate(1.000000, 0.000000)">
+                        <g id="Color/🎨C8A77F" transform="translate(1.000000, 0.000000)">
+                            <mask id="mask-2" fill="blue">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="蒙版" xlink:href="#path-1"></use>
+                            <g id="-mockplus-" mask="url(#mask-2)">
+                                <g transform="translate(-1.000000, 0.000000)" id="Color/🎨C8A77F">
+                                    <rect id="矩形备份-3-copy" x="0" y="0" width="22" height="22"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

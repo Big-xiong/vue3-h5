@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="6px" viewBox="0 0 10 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>箭头</title>
+    <defs>
+        <path d="M5.39821175,5.74352047 C5.26067769,5.89480794 5.07402433,6.03528915 4.89719483,5.99206416 C4.72036532,6.0244829 4.55335968,5.87319544 4.41582563,5.74352047 L0.16209371,1.04280287 C-0.0540312369,0.805065429 -0.0540312367,0.416040524 0.16209371,0.178303081 C0.378218657,-0.0594343607 0.731877662,-0.0594343603 0.948002609,0.178303081 L4.90701869,4.65208949 L8.87585863,0.178303081 C9.09198358,-0.0594343605 9.44564258,-0.0594343603 9.66176753,0.178303081 C9.87789247,0.416040523 9.87789247,0.805065428 9.66176753,1.04280287 L5.39821175,5.74352047 Z" id="path-1"></path>
+    </defs>
+    <g id="会员中心" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="回电弹框" transform="translate(-91.000000, -213.000000)">
+            <g id="编组-23" transform="translate(45.000000, 194.000000)">
+                <rect id="矩形" stroke="#FFFFFF" opacity="0.400000006" fill-rule="nonzero" x="0.5" y="0.5" width="284" height="43" rx="4"></rect>
+                <g id="箭头" transform="translate(46.000000, 19.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="蒙版" fill="#FFFFFF" fill-rule="nonzero" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

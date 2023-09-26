@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!--head-tags-->
+  <!--preload-links-->
+  <style>
+    .app-loading::after {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 999999;
+      padding-left: 2px;
+      text-align: left;
+      content: "";
+      background: #fff url('/images/loading.gif?[gifHash]') no-repeat center;
+      background-size: 256px 92px;
+    }
+
+    .app-loading.app-dark::after {
+      background-color: #000;
+      background-image: url('/images/loading_dark.gif?[gifHash]');
+    }
+
+    .slider::before {
+      z-index: 1000001;
+      padding-left: 2px;
+      background-color: #24C29A;
+      width: 150%;
+      height: 200%;
+      content: "";
+      transform: translateX(-130%) skewX(-10deg);
+      transition: transform 1.2s;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .slider-end::before {
+      transform: translateX(130%);
+    }
+  </style>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4TBZP32CDL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-4TBZP32CDL', {
+      linker: {
+        domains: ['blizzwin.com', 'www.blizzwin.com', 'm.blizzwin.com']
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <div id="app">
+    <!--app-html-->
+  </div>
+  <script type="module" src="/src/main.js"></script>
+  <script>
+    function removeLoading() {
+      const app = document.querySelector('#app');
+      app.classList.remove('app-loading');
+      app.classList.remove('slider');
+    }
+    function isDarkModule() {
+      const body = document.querySelector('body')
+      const isDark = Number((new URLSearchParams(location.search)).get('isDark')) === 0 ? true : false;
+      return isDark ? body.setAttribute("class", "") : body.setAttribute("class", "dark")
+    }
+    if ((new URLSearchParams(location.search)).get('source') === 'app') {
+      removeLoading()
+      isDarkModule()
+    }
+
+    const whiteListRoute = ['/play'];
+    const url = location.href.split('?')[0]
+    if (whiteListRoute.some(item => url.endsWith(item))) {
+      removeLoading()
+    }
+
+    /*--replace-play-constant--*/
+  </script>
+  <script>
+    function getCookie(cname) {
+      let name = cname + '=';
+      let ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i].trim();
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+      }
+      return '';
+    }
+
+    let app = document.querySelector('#app');
+    if (getCookie('showEnterLoading') === "true") {
+      app.classList.add('app-loading')
+      app.classList.add('slider')
+    }
+    if (getCookie('darkTheme') === 'true') {
+      app.classList.add('app-dark');
+    }
+
+    let lastTouchEnd = 0;  //更新手指弹起的时间
+    document.documentElement.addEventListener('touchstart', function (event) {
+      //多根手指同时按下屏幕，禁止默认行为
+      if (event.touches.length > 1) {
+        event.preventDefault();
+      }
+    });
+    document.documentElement.addEventListener('touchend', function (event) {
+      let now = (new Date()).getTime();
+      if (now - lastTouchEnd <= 300) {
+        //当两次手指弹起的时间小于300毫秒，认为双击屏幕行为
+        event.preventDefault();
+      } else { // 否则重新手指弹起的时间
+        lastTouchEnd = now;
+      }
+    }, false);
+
+    //阻止双指放大页面
+    document.documentElement.addEventListener('gesturestart', function (event) {
+      event.preventDefault();
+    });
+
+    window.onload = function () {
+      setTimeout(() => {
+        app.classList.add('slider-end');
+        setTimeout(() => {
+          app.classList.remove('app-loading');
+        }, 300);
+
+        // 1s后清掉loading
+        // 1s是滑动动画的时间，需要根据上面的时间同步
+        setTimeout(() => {
+          app.classList.remove('slider-end');
+          app.classList.remove('slider');
+        }, 500);
+      }, 1800);
+    };
+  </script>
+</body>
+
+</html>

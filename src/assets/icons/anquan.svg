@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>anquan</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.000000 0 0 0 0 0.639216 0 0 0 0 0.701961 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+        <filter id="filter-2">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.266667 0 0 0 0 0.623529 0 0 0 0 0.960784 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="会员中心" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="anquan-2" transform="translate(-18.000000, -239.000000)">
+            <g transform="translate(18.000000, 239.000000)" id="anquan">
+                <rect id="矩形" class="help-icon-circle" x="0.5" y="0.5" width="25" height="25" rx="12.5"></rect>
+                <g id="形状" transform="translate(7.800000, 7.150000)">
+                    <g transform="translate(0.000000, -0.000000)">
+                        <path class="help-icon-inner" d="M9.81682243,1.625 C9.81682243,1.625 9.03925234,1.625 7.77570094,1.16071428 C6.41495327,0.696428561 5.58878504,0.18571428 5.58878504,0.18571428 L5.19999999,0 L4.85981308,0.18571428 C4.85981308,0.18571428 3.98504673,0.696428561 2.67289718,1.16071428 C1.36074765,1.57857143 0.631775686,1.625 0.631775686,1.625 L0,1.67142857 L0,8.07857143 C0,10.4464286 4.61682243,13 5.19999999,13 C5.73457943,13 10.4,10.4464286 10.4,8.07857143 L10.4,1.67142857 L9.81682243,1.625 Z M4.85981308,9.00714285 L2.42990653,6.87142857 L3.1588785,5.98928572 L4.71401868,7.33571429 L7.62990653,3.85357144 L8.50467288,4.64285716 L4.85981308,9.00714285 L4.85981308,9.00714285 Z" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

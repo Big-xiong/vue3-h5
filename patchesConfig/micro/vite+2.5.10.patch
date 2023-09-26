@@ -1,0 +1,37 @@
+diff --git a/node_modules/vite/dist/client/client.mjs b/node_modules/vite/dist/client/client.mjs
+index d40b584..fdd0d4a 100644
+--- a/node_modules/vite/dist/client/client.mjs
++++ b/node_modules/vite/dist/client/client.mjs
+@@ -363,7 +363,11 @@ function updateStyle(id, content) {
+             style = document.createElement('style');
+             style.setAttribute('type', 'text/css');
+             style.innerHTML = content;
+-            document.head.appendChild(style);
++            let target = document.querySelector('div[data-name="vue_micro_app"]')?.shadowRoot;
++            if (!target) {
++                target = document.body;
++            }
++            target.appendChild(style);
+         }
+         else {
+             style.innerHTML = content;
+diff --git a/node_modules/vite/dist/node/chunks/dep-36bf480c.js b/node_modules/vite/dist/node/chunks/dep-36bf480c.js
+index 25ae4b4..171bc6b 100644
+--- a/node_modules/vite/dist/node/chunks/dep-36bf480c.js
++++ b/node_modules/vite/dist/node/chunks/dep-36bf480c.js
+@@ -34790,7 +34790,14 @@ function preload(baseModule, deps) {
+         }
+         link.href = dep;
+         // @ts-ignore
+-        document.head.appendChild(link);
++        // document.head.appendChild(link);
++        let target = document.querySelector('div[data-name="vue_micro_app"]');
++        if (target) {
++          target = target.shadowRoot;
++        }else{
++          target = document.head;
++        }
++        target.appendChild(link);     
+         if (isCss) {
+             return new Promise((res, rej) => {
+                 link.addEventListener('load', res);

@@ -1,0 +1,97 @@
+@--dark-bg-color-000: #000;
+@--dark-theme-color: #070707;
+@--dark-fff: #fff;
+@--dark-fff-04: rgba(#fff, 0.4);
+@--dark-fff-06: rgba(#fff, 0.6);
+@--dark-111: #111;
+@--dark-9a9a9a: #9a9a9a;
+@--dark-000: #000;
+@--dark-666: #666;
+@--dark-333: #333;
+@--dark-1c1c1c: #1c1c1c;
+@--dark-282828: #282828;
+@--dark-303030: #303030;
+@--dark-ccc: #ccc;
+@--dark-999: #999;
+@--dark-2b2b2b: #2b2b2b;
+@--dark-00654e: #00654e;
+@--dark-transparent: transparent;
+@--bg-color-191919: #191919;
+@--dark-theme-main: #24c29a;
+@--dark-525152: #525152;
+@--dark-ccc: #ccc;
+
+:root {
+  .dark {
+    --dark-bg-color-000: ~'@{--dark-bg-color-000}';
+    --dark-theme-color: ~'@{--dark-theme-color}';
+    --dark-transparent: ~'@{--dark-transparent}';
+    --dark-fff: ~'@{--dark-fff}';
+    --dark-9a9a9a: ~'@{--dark-9a9a9a}';
+    --dark-000: ~'@{--dark-000}';
+    --dark-666: ~'@{--dark-666}';
+    --dark-1c1c1c: ~'@{--dark-1c1c1c}';
+    --dark-999: ~'@{--dark-999}';
+    --dark-111: ~'@{--dark-111}';
+    --dark-333: ~'@{--dark-333}';
+    --dark-33323e: #33323e;
+    --dark-282828: ~'@{--dark-282828}';
+    --dark-2b2b2b: ~'@{--dark-2b2b2b}';
+    --dark-303030: ~'@{--dark-303030}';
+    --dark-ccc: ~'@{--dark-ccc}';
+    --dark-bg-color-191919: ~'@{--bg-color-191919}';
+    --user-bg-color-191919: ~'@{--bg-color-191919}';
+    --dark-fff-04: ~'@{--dark-fff-04}';
+    --dark-fff-06: ~'@{--dark-fff-06}';
+    --dark-theme-main: ~'@{--dark-theme-main}';
+    --dark-loading-bg: rgba(#000, 0.7);
+    --dark-00654e: ~'@{--dark-00654e}';
+    --dark-525152: ~'@{--dark-525152}';
+    --dark-ccc: ~'@{--dark-ccc}';
+    --dark-ranks-shadow: transparent;
+    --filter-svg-color: ~'@{--dark-fff}';
+
+    .van-picker {
+      background-color: var(--dark-bg-color-191919);
+
+      .van-picker__frame::after {
+        border-color: transparent;
+      }
+
+      .van-picker__toolbar {
+        border-top: none;
+        border-bottom-color: var(--dark-333);
+        .van-picker__cancel {
+          color: var(--dark-fff);
+        }
+      }
+
+      .van-ellipsis {
+        color: var(--dark-fff);
+      }
+    }
+
+    .loading-overlay {
+      background-color: var(--dark-loading-bg);
+    }
+
+    .logo-loading {
+      .van-loading {
+        background-image: url('/src/assets/dark/loading.gif');
+      }
+    }
+
+
+    .van-image {
+      .van-image__empty, .van-image__error, .van-image__loading {
+        background-image: url('/src/assets/images/error_dark.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 35% auto;
+        i {
+          display: none;
+        }
+      }
+    }
+  }
+}

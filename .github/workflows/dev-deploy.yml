@@ -1,0 +1,174 @@
+name: dev-depoly
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build-matrix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Get Commit Message
+        id: message
+        run: |
+          message="${{ github.event.head_commit.message }}"
+          message=$(echo $message | sed 's/ //g')
+          if [[ $message =~ \(nocache\) ]]; then
+            echo "::set-output name=NO_CACHE::$(echo '1')"
+          else 
+            echo "::set-output name=NO_CACHE::$(echo '0')"
+          fi 
+
+          array="["
+          if [[ $message =~ ^\[.+\] ]]; then
+            message=$(echo $message | tr -d '[')
+            message=$(echo $message | sed -E 's/\].+//g')
+            
+            if [[ $message =~ "YY" ]]; then
+              message=${message/YY/10001|10029|10064}
+            fi
+            if [[ $message =~ "YBX" ]]; then
+              message=${message/YBX/10022|10023|10024|10025|10026|10027|10028|10033}
+            fi
+            if [[ $message =~ "AMX" ]]; then
+              message=${message/AMX/10004|10005|10006|10007|10008|10009|10010|10011|10012|10013|10014|10018|10019|10020|10021|10034|10057}
+            fi
+
+            IFS='|' read -ra merchant <<< "$message"
+            for i in "${merchant[@]}"; do
+            array="${array} \"${i}\","
+            done
+            array="${array} ]"
+
+            echo $array
+            echo $message
+          fi
+          echo $array
+          echo "::set-output name=MERCHANT::$(echo $array)"
+    outputs:
+      matrix: ${{ steps.message.outputs.MERCHANT }}
+      no_cache: ${{ steps.message.outputs.NO_CACHE }}
+
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    needs: build-matrix
+    strategy:
+      matrix:
+        merchant: ${{ fromJson(needs.build-matrix.outputs.matrix) }}
+    steps:
+      - run: echo ${{ needs.build-matrix.outputs.no_cache  }}
+      - name: setup start time
+        id: start-time
+        run: echo "::set-output name=start_time::$(date +%s)"
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2.3.1
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          known_hosts: 140.82.113.3
+          if_key_exists: fail
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.5.1
+        with:
+          node-version: '14.17.0'
+
+      - name: Cache dependencies
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: ./node_modules
+          key: modules-${{ hashFiles('package-lock.json') }}
+
+      - name: Clean micro patches
+        run: node scripts/patches
+
+      - name: Clean install dependencies
+        if: needs.build-matrix.outputs.no_cache == '1'
+        run: |
+          rm package-lock.json
+          rm -rf node_modules/vant
+          npm ci
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true' && needs.build-matrix.outputs.no_cache == '0'
+        # npm 7.0之后的版本 ci 命令不再执行postinstall
+        run: |
+          npm ci
+          export NODE_OPTIONS=--max_old_space_size=20480
+
+      - name: process .env
+        run: |
+          if [[ ${{ matrix.merchant }} == ^5 ]]; then
+            rm -rf .env
+            mv .env.overseas .env
+          fi
+          echo .env
+
+      - run: VITE_APP_ASSET_PATH=//acebet-frontend.oss-cn-shanghai.aliyuncs.com/${{matrix.merchant}}/h5 npm run build:test ${{ matrix.merchant }}
+
+      - name: add 200.html
+        run: |
+          cp dist/index.html dist/200.html
+          mkdir -p ${{ matrix.merchant }}/h5
+          mv dist/* ${{ matrix.merchant }}/h5
+          mv ${{ matrix.merchant }} dist
+        id: add-200
+        continue-on-error: true
+
+      - name: Deploy to Server Assets
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: '-rltgoDzvO'
+          SOURCE: 'dist/'
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: 'root'
+          TARGET: '/home/www/'
+
+      - name: Deploy to Server OSS
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: ossutil sync /home/www/${{ matrix.merchant }}/h5 oss://acebet-frontend/${{ matrix.merchant }}/h5 -f --exclude "*.html" --exclude "*.htm" --exclude "*.txt"
+
+      - name: Check build status
+        if: steps.add-200.outcome != 'success'
+        run: |
+          START_TIME=${{steps.start-time.outputs.start_time}}
+          END_TIME=$(date +%s)
+          ELAPSE=$(( $END_TIME - $START_TIME ))
+
+          curl --location --request POST 'https://bot-aide.azurewebsites.net/api/notify' \
+          --header 'Authorization: GHkY2TIeAwNlTiwtb3FZ3ZXiDl35CTfA' \
+          --header 'Content-Type: application/json' \
+          --header 'Cookie: ARRAffinity=c7a15bd1e98d3f52dd952bb0570ec15b22901e590db79e3b66d126c024b2591a; ARRAffinitySameSite=c7a15bd1e98d3f52dd952bb0570ec15b22901e590db79e3b66d126c024b2591a' \
+          --data-raw ' [
+                {
+                    "cid": "19:d986e0d86fb54b738248982214f44006@thread.skype",
+                    "content": "【构建通知】- ${{ github.event.repository.name }}/${{ github.ref_name }} - ${{ matrix.merchant }} \n 构建失败 耗时'"$(($ELAPSE/60))分$(($ELAPSE%60))"'秒 \n [查看构建日志](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) "
+                }
+            ]'
+          exit 1
+
+      - name: Check build status
+        continue-on-error: true
+        run: |
+          START_TIME=${{steps.start-time.outputs.start_time}}
+          END_TIME=$(date +%s)
+          ELAPSE=$(( $END_TIME - $START_TIME ))
+
+          curl --location --request POST 'https://bot-aide.azurewebsites.net/api/notify' \
+          --header 'Authorization: GHkY2TIeAwNlTiwtb3FZ3ZXiDl35CTfA' \
+          --header 'Content-Type: application/json' \
+          --header 'Cookie: ARRAffinity=c7a15bd1e98d3f52dd952bb0570ec15b22901e590db79e3b66d126c024b2591a; ARRAffinitySameSite=c7a15bd1e98d3f52dd952bb0570ec15b22901e590db79e3b66d126c024b2591a' \
+          --data-raw ' [
+                {
+                    "cid": "19:d986e0d86fb54b738248982214f44006@thread.skype",
+                    "content": "【构建通知】- ${{ github.event.repository.name }}/${{ github.ref_name }} - ${{ matrix.merchant }} \n [部署地址](http://${{ matrix.merchant }}.h5.wq-test.com) -- 构建成功 耗时'"$(($ELAPSE/60))分$(($ELAPSE%60))"'秒 \n [查看构建日志](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) "
+                }
+            ]'

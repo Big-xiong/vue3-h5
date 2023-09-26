@@ -1,0 +1,333 @@
+@import './variables.less';
+
+@--theme-color: #24c29a;
+@primary-color: @--theme-color;
+// Global
+@--bg-color: #1e1e1e; // 页面背景色
+@--bg-color-24c29a: #24c29a;
+@--bg-color-d6d6d6: #d6d6d6;
+@--bg-color-0e8869: #0e8869;
+@--bg-color-cbcbcb: #cbcbcb;
+@--bg-color-A9FFE9: #a9ffe9;
+@--bg-color-EFFEFA: #effefa;
+@--bg-color-42535d: #42535d;
+@--bg-color-DCD4CB: #dcd4cb;
+@--bg-color-d8d8d8: #d8d8d8;
+@--bg-color-ffffff: #ffffff;
+@--bg-color-f5f5f5: #f5f5f5;
+@--bg-color-e5e5e5: #e5e5e5;
+@--bg-color-e9e9e9: #e9e9e9;
+@--bg-color-dbdbdb: #dbdbdb;
+@--bg-color-77FFDD: #77ffdd;
+@--bg-color-ededed: #ededed;
+@--bg-color-000000: #000000;
+@--bg-color-bdbdbd: #bebebe;
+@--bg-color-10141f: #10141f;
+@--bg-color-d1d1d1: #d1d1d1;
+@--bg-color-f7f7f7: #f7f7f7;
+@--bg-color-2A313E: #2a313e;
+@--bg-color-f6f6f6: #f6f6f6;
+@--bg-color-2a313e: #2a313e;
+@--bg-color-1e212e: #1e212e;
+@--bg-color-f3f3f3: #f3f3f3;
+@--bg-color-cdcdcd: #cdcdcd;
+@--bg-color-ecf0f6: #ecf0f6;
+@--bg-color-c55055: #c55055;
+@--bg-color-d1c186: #d1c186;
+@--bg-color-e8e8e8: #e8e8e8;
+@--bg-color-666666: #666666;
+@--bg-color-f1f1f1: #f1f1f1;
+@--bg-color-f2f3f4: #f2f3f4;
+@--bg-color-f8f8f8: #f8f8f8;
+@--bg-color-21c199: #21c199;
+@--bg-color-b9ab75: #b9ab75;
+@--bg-color-7ae5ce: #7ae5ce;
+@--bg-color-1fa07c: #1fa07c;
+@--bg-color-a9ffe9: #a9ffe9;
+@--bg-color-00a0b0: #00a0b0;
+@--bg-color-173253: #23c299;
+@--bg-color-0c1d29: #1db890;
+@--bg-color-12212d: #23b08c;
+@--bg-color-e12937: #e12937;
+@--bg-color-c5c5c5: #c5c5c5;
+@--bg-color-e74f38: #e74f38;
+@--bg-color-edd0bc: #edd0bc;
+@--bg-color-6093ec: #6093ec;
+@--bg-color-e64e37: #e64e37;
+@--bg-color-f8f5e9: #f8f5e9;
+@--bg-color-122643: #122643;
+@--background: linear-gradient(270deg, #ffffff, #ebfffa 48%, #24c29a);
+@--background-007658: linear-gradient(180deg, #24c29a, #007658);
+// 字体
+@--font-family: Din Alternate, Quicksand, PingFang SC, Hiragino Sans GB, Helvetica Neue, Microsoft Yahei, sans-serif, arial;
+@--font-family-helvetica: Helvetica, Helvetica-Regular;
+@--font-color-ffffff: #ffffff;
+@--font-color-515151: #515151;
+@--font-color-848484: #848484;
+@--font-color-333333: #333333;
+@--font-color-817f7f: #817f7f;
+@--font-color-2e2e2e: #2e2e2e;
+@--font-color-0a0a0a: #0a0a0a;
+@--font-color-525152: #525152;
+@--font-color-cdcdcd: #cdcdcd;
+@--font-color-606060: #606060;
+@--font-color-8c8c8c: #8c8c8c;
+@--font-color-9a9a9a: #9a9a9a;
+@--font-color-333333: #333333;
+@--font-color-222930: #222930;
+@--font-color-cccccc: #cccccc;
+@--font-color-2d2e2f: #2d2e2f;
+@--font-color-24c29a: #24c29a;
+@--font-color-434349: #434349;
+@--font-color-404040: #404040;
+@--font-color-2b2b2b: #2b2b2b;
+@--font-color-999999: #999999;
+@--font-color-bdbdbd: #bdbdbd;
+@--font-color-fa5300: #fa5300;
+@--font-color-ff000b: #ff000b;
+@--font-color-ff6666: #ff6666;
+@--font-color-000000: #000000;
+@--font-color-222930: #222930;
+@--font-color-666666: #666666;
+@--font-color-929292: #929292;
+@--font-color-bbbbbb: #bbbbbb;
+@--font-color-363636: #363636;
+@--font-color-9fbbd5: #9fbbd5;
+@--font-color-969696: #969696;
+@--font-color-979797: #979797;
+@--font-color-eecc8e: #eecc8e;
+@--font-color-91570d: #91570d;
+@--font-color-79480a: #79480a;
+@--font-color-ffe400: #ffe400;
+@--font-color-ffd700: #ffd700;
+@--font-color-f74848: #f74848;
+@--font-color-3d2944: #3d2944;
+@--font-color-614411: #614411;
+@--font-color-ffe6b1: #ffe6b1;
+@--font-color-f3daa4: #f3daa4;
+@--font-color-e3af44: #e3af44;
+@--font-color-7f7f7f: #7f7f7f;
+@--font-color-fdd77e: #fdd77e;
+@--font-color-41beff: #41beff;
+@--font-color-515104: rgba(51, 51, 51, 0.4);
+@--font-color-fff-4: rgba(255, 255, 255, 0.4);
+@--font-color-000-4: rgba(0, 0, 0, 0.4);
+@--font-color-000-6: rgba(0, 0, 0, 0.6);
+@--font-color-f66: #f66;
+@--font-color-ff3f00: #ff3f00;
+@--border-color-26aae1: #26aae1; // 边框颜色
+@--border-color-c4c4c4: #c4c4c4; // 边框颜色
+@--border-color-ececec: #ececec; // 边框颜色
+@--border-color-e7e7e7: #e7e7e7; // 边框颜色
+@--border-color-838383: #838383; // 边框颜色
+@--border-color-24c29a: #24c29a; // 边框颜色
+@--border-color-fff: #fff; // 边框颜色
+@--border-color-666: #666; // 边框颜色
+@--border-color-f7f7f7: #f7f7f7; // 边框颜色;
+@--border-color-cacaca: #cacaca; // 边框颜色
+@--border-color-cccccc: #cccccc; // 边框颜色
+@--border-color-ecf0f6: #ecf0f6; // 边框颜色
+@--border-color-262626: #262626; // 边框颜色
+@--border-color-525152-02: rgba(#525152, 0.2); // 边框颜色
+@--border-color-18703: rgba(187, 187, 187, 0.3); // 边框颜色
+@--border-color-22501: rgba(255, 255, 255, 0.1); // 边框颜色
+@--border-color-00001: rgba(0, 0, 0, 0.1); // 边框颜色
+@--border-color-00002: rgba(0, 0, 0, 0.2); // 边框颜色
+// Tabbar
+@tabbar-background-color: #222930;
+// @van-tabbar-item-active-background: linear-gradient(180deg, #25c39b, #222930);
+
+@white: #fff;
+
+// Button
+@button-color-white: @white;
+@button-default-color: @--theme-color;
+@button-normal-color: #1e1e1e;
+@button-default-bg: transparent;
+@button-default-border-color: @--theme-color;
+@button-default-height: 50px;
+@button-default-weight: 600;
+@button-success-color: @white;
+
+@--color-51-01: rgba(51, 51, 51, 0.1);
+
+@--user-head-person-color: #24c29a;
+@--user-head-bg-color: #d3f3eb;
+
+#app,
+#app ~ * {
+  --bg-color: ~'@{--bg-color}'; // 页面背景色
+  --background: ~'@{--background}'; // 页面背景色
+  --background-007658: ~'@{--background-007658}'; // 页面背景色
+  --theme-color: ~'@{--bg-color-24c29a}'; // 页面背景色
+  --bg-color-d6d6d6: ~'@{--bg-color-d6d6d6}'; // 页面背景色
+  --bg-color-24c29a: ~'@{--bg-color-24c29a}'; // 页面背景色
+  --bg-color-ffffff: ~'@{--bg-color-ffffff}'; // 页面背景色
+  --bg-color-2A313E: ~'@{--bg-color-2A313E}'; // 页面背景色
+  --bg-color-dbdbdb: ~'@{--bg-color-dbdbdb}'; // 页面背景色
+  --bg-color-cbcbcb: ~'@{--bg-color-cbcbcb}'; // 页面背景色
+  --bg-color-7ae5ce: ~'@{--bg-color-7ae5ce}'; // 页面背景色
+  --bg-color-f2f3f4: ~'@{--bg-color-f2f3f4}'; // 页面背景色
+  --bg-color-e9e9e9: ~'@{--bg-color-e9e9e9}'; // 页面背景色
+  --bg-color-ededed: ~'@{--bg-color-ededed}'; // 页面背景色
+  --bg-color-EFFEFA: ~'@{--bg-color-EFFEFA}'; // 页面背景色
+  --bg-color-A9FFE9: ~'@{--bg-color-A9FFE9}'; // 页面背景色
+  --bg-color-00a0b0: ~'@{--bg-color-00a0b0}'; // 页面背景色
+  --bg-color-000000: ~'@{--bg-color-000000}'; // 页面背景色
+  --bg-color-bdbdbd: ~'@{--bg-color-bdbdbd}'; // 页面背景色
+  --bg-color-f7f7f7: ~'@{--bg-color-f7f7f7}'; // 页面背景色
+  --bg-color-0e8869: ~'@{--bg-color-0e8869}'; // 页面背景色
+  --bg-color-d1d1d1: ~'@{--bg-color-d1d1d1}'; // 页面背景色
+  --bg-color-c55055: ~'@{--bg-color-c55055}'; // 页面背景色
+  --bg-color-10141f: ~'@{--bg-color-10141f}'; // 页面背景色
+  --bg-color-2a313e: ~'@{--bg-color-2a313e}'; // 页面背景色
+  --bg-color-1e212e: ~'@{--bg-color-1e212e}'; // 页面背景色
+  --bg-color-f3f3f3: ~'@{--bg-color-f3f3f3}'; // 页面背景色
+  --bg-color-ecf0f6: ~'@{--bg-color-ecf0f6}'; // 页面背景色
+  --bg-color-d1c186: ~'@{--bg-color-d1c186}'; // 页面背景色
+  --bg-color-77ffdd: ~'@{--bg-color-77FFDD}'; // 页面背景色
+  --bg-color-cdcdcd: ~'@{--bg-color-cdcdcd}'; // 页面背景色
+  --bg-color-e8e8e8: ~'@{--bg-color-e8e8e8}'; // 页面背景色
+  --bg-color-666666: ~'@{--bg-color-666666}'; // 页面背景色
+  --bg-color-f1f1f1: ~'@{--bg-color-f1f1f1}'; // 页面背景色
+  --bg-color-e12937: ~'@{--bg-color-e12937}';
+  --switch-bg-color-f1f1f1: ~'@{--bg-color-f1f1f1}'; // 页面背景色
+  --bg-color-21c199: ~'@{--bg-color-21c199}'; // 页面背景色
+  --bg-color-f5f5f5: ~'@{--bg-color-f5f5f5}'; // 页面背景色
+  --bg-color-d8d8d8: ~'@{--bg-color-d8d8d8}'; // 页面背景色
+  --bg-color-42535d: ~'@{--bg-color-42535d}'; // 页面背景色
+  --bg-color-e5e5e5: ~'@{--bg-color-e5e5e5}'; // 页面背景色
+  --bg-color-f8f8f8: ~'@{--bg-color-f8f8f8}'; // 页面背景色
+  --bg-color-f6f6f6: ~'@{--bg-color-f6f6f6}'; // 页面背景色
+  --bg-color-b9ab75: ~'@{--bg-color-b9ab75}'; // 页面背景色
+  --bg-color-DCD4CB: ~'@{--bg-color-DCD4CB}'; // 页面背景色
+  --bg-color-a9ffe9: ~'@{--bg-color-a9ffe9}'; // 页面背景色
+  --bg-color-1fa07c: ~'@{--bg-color-1fa07c}'; // 页面背景色
+  --bg-color-173253: ~'@{--bg-color-173253}'; // 页面背景色
+  --bg-color-0c1d29: ~'@{--bg-color-0c1d29}'; // 页面背景色
+  --bg-color-12212d: ~'@{--bg-color-12212d}'; // 页面背景色
+  --bg-color-c5c5c5: ~'@{--bg-color-c5c5c5}'; // 页面背景色
+  --bg-color-e74f38: ~'@{--bg-color-e74f38}'; // 页面背景色
+  --bg-color-edd0bc: ~'@{--bg-color-edd0bc}'; // 页面背景色
+  --bg-color-6093ec: ~'@{--bg-color-6093ec}'; // 页面背景色
+  --bg-color-e64e37: ~'@{--bg-color-e64e37}'; // 页面背景色
+  --bg-color-f8f5e9: ~'@{--bg-color-f8f5e9}'; // 页面背景色
+  --bg-color-122643: ~'@{--bg-color-122643}'; // 页面背景色
+  --password-ingput-bg-color: ~'@{--bg-color-666666}';
+  --bg-color-vip-bar: ~'@{--bg-color-1fa07c}';
+  --bg-color-vip-bar-process: ~'@{--bg-color-A9FFE9}';
+
+  --bg-color-3f3f3f: #3f3f3f; // 页面背景色
+  --font-color-606060: ~'@{--font-color-606060}';
+  --font-color-ffffff: ~'@{--font-color-ffffff}';
+  --font-color-fff: ~'@{--font-color-ffffff}';
+  --font-color-24c29a: ~'@{--font-color-24c29a}';
+  --font-color-434349: ~'@{--font-color-434349}';
+  --font-color-404040: ~'@{--font-color-404040}';
+  --font-color-2b2b2b: ~'@{--font-color-2b2b2b}';
+  --font-color-999999: ~'@{--font-color-999999}';
+  --font-color-0a0a0a: ~'@{--font-color-0a0a0a}';
+  --font-color-fa5300: ~'@{--font-color-fa5300}';
+  --font-color-ff000b: ~'@{--font-color-ff000b}';
+  --font-color-333333: ~'@{--font-color-333333}';
+  --font-color-000000: ~'@{--font-color-000000}';
+  --font-color-222930: ~'@{--font-color-222930}';
+  --font-color-bdbdbd: ~'@{--font-color-bdbdbd}';
+  --font-color-666666: ~'@{--font-color-666666}';
+  --font-color-929292: ~'@{--font-color-929292}';
+  --font-color-bbbbbb: ~'@{--font-color-bbbbbb}';
+  --font-color-cccccc: ~'@{--font-color-cccccc}';
+  --font-color-8c8c8c: ~'@{--font-color-8c8c8c}';
+  --font-color-515151: ~'@{--font-color-515151}';
+  --font-color-cdcdcd: ~'@{--font-color-cdcdcd}';
+  --font-color-515104: ~'@{--font-color-515104}';
+  --font-color-9a9a9a: ~'@{--font-color-9a9a9a}';
+  --font-color-525152: ~'@{--font-color-525152}';
+  --font-color-ff3f00: ~'@{--font-color-ff3f00}';
+  --font-color-9fbbd5: ~'@{--font-color-9fbbd5}';
+  --font-color-363636: ~'@{--font-color-363636}';
+  --font-color-ff6666: ~'@{--font-color-ff6666}';
+  --font-color-848484: ~'@{--font-color-848484}';
+  --font-color-817f7f: ~'@{--font-color-817f7f}';
+  --font-color-2e2e2e: ~'@{--font-color-2e2e2e}';
+  --font-color-f66: ~'@{--font-color-f66}';
+  --font-color-969696: ~'@{--font-color-969696}';
+  --font-color-eecc8e: ~'@{--font-color-eecc8e}';
+  --font-color-91570d: ~'@{--font-color-91570d}';
+  --font-color-79480a: ~'@{--font-color-79480a}';
+  --font-color-979797: ~'@{--font-color-979797}';
+  --font-color-ffe400: ~'@{--font-color-ffe400}';
+  --font-color-ffd700: ~'@{--font-color-ffd700}';
+  --font-color-f74848: ~'@{--font-color-f74848}';
+  --font-color-3d2944: ~'@{--font-color-3d2944}';
+  --font-color-614411: ~'@{--font-color-614411}';
+  --font-color-ffe6b1: ~'@{--font-color-ffe6b1}';
+  --font-color-f3daa4: ~'@{--font-color-f3daa4}';
+  --font-color-e3af44: ~'@{--font-color-e3af44}';
+  --font-color-7f7f7f: ~'@{--font-color-7f7f7f}';
+  --font-color-fdd77e: ~'@{--font-color-fdd77e}';
+  --font-color-41beff: ~'@{--font-color-41beff}';
+  --font-color-51-01: ~'@{--color-51-01}';
+  --font-color-000-4: ~'@{--font-color-000-4}';
+  --font-color-000-6: ~'@{--font-color-000-6}';
+  --cur-color-2d2e2f: ~'@{--font-color-2d2e2f}';
+
+  --border-color-fff: ~'@{--border-color-fff}';
+  --border-color-666: ~'@{--border-color-666}';
+  --border-color-f7f7f7: ~'@{--border-color-f7f7f7}';
+  --border-color-ececec: ~'@{--border-color-ececec}';
+  --border-color-262626: ~'@{--border-color-262626}';
+  --border-color-e7e7e7: ~'@{--border-color-e7e7e7}';
+  --border-color-26aae1: ~'@{--border-color-26aae1}';
+  --border-color-c4c4c4: ~'@{--border-color-c4c4c4}';
+  --border-color-838383: ~'@{--border-color-838383}';
+  --border-color-24c29a: ~'@{--border-color-24c29a}';
+  --border-color-18703: ~'@{--border-color-18703}';
+  --border-color-22501: ~'@{--border-color-22501}';
+  --border-color-00001: ~'@{--border-color-00001}';
+  --border-color-00002: ~'@{--border-color-00002}';
+  --border-color-cccccc: ~'@{--border-color-cccccc}';
+  --border-color-525152-02: ~'@{--border-color-525152-02}';
+  --border-color-cacaca: ~'@{--border-color-cacaca}';
+  --border-color-ecf0f6: ~'@{--border-color-ecf0f6}';
+  --border-color-51-01: ~'@{--color-51-01}';
+  --border-color-838383: ~'@{--border-color-cccccc}';
+  --tips-border-color-51-01: ~'@{--color-51-01}';
+
+  --font-family-helvetica: ~'@{--font-family-helvetica}';
+  --van-tabbar-background-color: ~'@{tabbar-background-color}';
+  // --van-tabbar-item-active-background: ~'@{van-tabbar-item-active-background}';
+  --van-tabbar-item-text-color: ~'@{--font-color-ffffff}';
+  --van-tabbar-item-active-color: ~'@{--font-color-ffffff}';
+  --van-popup-close-icon-color: ~'@{--font-color-333333}';
+
+  --loading-bg: rgba(#fff, 0.6);
+  --loading-font-color: #fff;
+  --ranks-shadow: rgba(0, 0, 0, 0.08);
+  --filter-svg-color: ~'@{--font-color-999999}';
+  --user-head-svg-color: ~'@{--bg-color-ffffff}';
+  --font-vip-color: ~'@{--theme-color}';
+  --font-svg-notice-color: ~'@{--font-color-ffffff}';
+  --font-v-color: ~'@{--theme-color}';
+  --tooltip-bg-color-ffffff: ~'@{--bg-color-ffffff}';
+  --pie-border-color-ffffff: ~'@{--bg-color-ffffff}';
+  --help-cirle-bg-color: ~'@{--theme-color}';
+  --help-inner-bg-color: ~'@{--theme-color}';
+  --picker-confirm-action-color: ~'@{--theme-color}';
+  --picker-cancle-action-color: ~'@{--font-color-999999}';
+  --picker-toolbar-border-color: ~'@{--bg-color-f1f1f1}';
+  --user-head-person-color: ~'@{--user-head-person-color}';
+  --user-head-bg-color: ~'@{--user-head-bg-color}';
+  --card-bg-color01: ~'@{--theme-color}';
+  --cur-color-cccccc: ~'@{--font-color-cccccc}';
+  --card-bg-color02: #1fb891;
+  --card-bg-color03: #23b08c;
+  --exchange-arrow-bot-color: #878787;
+  --bg-user-commission-icon: ~'@{--bg-color-ffffff}';
+  --cur-bg-color-F1F1F1: #f1f1f1;
+  --filter-svg-color: ~'@{--font-color-000-4}';
+  --daliy-item-bg-color: ~'@{--bg-color-ffffff}';
+  --omit-bg-color-fff: #ffffff;
+  --daliy-p-font-color: ~'@{--font-color-999999}';
+  --bg-everyday: linear-gradient(180deg, #264db9 0%, #162d97 100%);
+}

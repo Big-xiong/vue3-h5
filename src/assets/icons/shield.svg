@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="18px" viewBox="0 0 14 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon Shield</title>
+    <g id="会员中心" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="最新动态/取款排行榜" transform="translate(-123.000000, -739.000000)">
+            <g id="编组-4" transform="translate(113.000000, 733.000000)">
+                <g id="Icon-Shield" transform="translate(10.000000, 6.000000)">
+                    <path d="M0,3 C2.66666667,3 5,2 7,0 C9,2 11.3333333,3 14,3 C14,7 14,8 14,11 C14,13 11.6666667,15.3333333 7,18 C2.33333333,15.3333333 0,13 0,11 C0,8 0,7 0,3 Z" id="Rectangle-4" fill="#FFFFFF"></path>
+                    <polyline id="Path-5" class="svg-shield" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="4 9 6 11 10.5 7"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

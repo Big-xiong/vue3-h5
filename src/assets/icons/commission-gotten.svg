@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="47px" viewBox="0 0 47 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 8</title>
+    <defs>
+        <path d="M42.293,0.00053425371 C44.1776927,0.00053425371 45.7579466,1.30399185 46.1814643,3.05860966 L46.2800052,19.4101676 L46.1583711,46.1585912 L0,0 L42.293,0.00053425371 Z" id="path-1"></path>
+        <filter id="filter-3">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.000000 0 0 0 0 0.000000 0 0 0 0 0.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="代理" stroke="none" stroke-width="1" >
+        <g id="佣金_已经选择时间" transform="translate(-313.000000, -108.000000)">
+            <g id="编组-8" transform="translate(313.000000, 107.999466)">
+                <g id="未发放">
+                    <mask id="mask-2">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="蒙版" xlink:href="#path-1"></use>
+                </g>
+                <g id="未发放">
+                    <g transform="translate(28.000000, 8.000534)">
+                        <circle class="svg-commission-gotten_con" id="椭圆形" stroke="#FFFFFF" stroke-width="1.5" cx="7" cy="7" r="6.25"></circle>
+                        <polyline class="svg-commission-gotten_con" id="路径-3" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" points="6.4274101 4.11485696 6.4274101 8.11485696 10.4274101 8.11485696"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

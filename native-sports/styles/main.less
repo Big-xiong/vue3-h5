@@ -1,0 +1,152 @@
+@import './reset.less';
+@import 'vant/lib/index.css';
+@import './root.less';
+@import './dark.less';
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--app-bg-color);
+
+  .van-nav-bar {
+    background-color: transparent;
+
+    .van-nav-bar__title {
+      max-width: 80%;
+      font-size: 36px;
+      color: var(--dark-fff, var(--font-color-0A0A0A));
+    }
+
+    &.van-hairline--bottom::after {
+      border: 0;
+    }
+  }
+
+  .van-tabs {
+    .van-tabs__line {
+      background-color: transparent;
+    }
+  }
+}
+
+.van-button {
+  background-color: var(--app-bg-color, var(--bg-color-fff));
+  color: var(--dark-fff, var(--font-color-0A0A0A));
+  border-color: var(--dark-4E4C5D, var(--bg-color-fff));
+}
+
+.van-popup {
+  background-color: var(--dark-card-bg-color, var(--bg-color-fff));
+}
+
+.van-toast {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  .van-toast__text {
+    color: white;
+  }
+}
+
+.van-loading__circular {
+  color: var(--theme-color);
+}
+
+.van-toast__text {
+  color: var(--dark-fff, var(--font-color-0A0A0A));
+}
+
+.van-popup.van-popup--right {
+  height: 100%;
+  border-radius: 0;
+  width: 520px;
+  background: var(--dark-card-bg-color, var(--bg-color-fff));
+  .popup-body {
+    padding: 0;
+  }
+}
+
+.sport-refresh {
+  transition: all 0.45s ease-out;
+  // float: left;
+  color: var(--font-color-ccc);
+  font-size: 32px;
+  margin-left: 23px;
+  line-height: 98px;
+
+  &.active {
+    animation: refresh 0.7s linear infinite;
+  }
+
+  @keyframes refresh {
+    from {
+      transform: rotate(0);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.van-image {
+  .van-image__empty,
+  .van-image__error,
+  .van-image__loading {
+    // background-image: url('/src/assets/images/error.png');
+    background-image: url('/src/assets/native-sports/images/error.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    i {
+      display: none;
+    }
+  }
+}
+
+.van-datetime-picker {
+  background-color: var(--card-bg-color, var(--bg-color-fff));
+
+  .van-picker__title,
+  .van-picker__cancel {
+    color: var(--dark-fff);
+  }
+  .van-picker__confirm {
+    color: var(--theme-color);
+  }
+  .van-picker-column__item {
+    color: var(--dark-fff);
+  }
+}
+
+.van-toast--loading {
+  width: 116px;
+  padding: 0;
+  height: 116px;
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  min-width: 116px;
+  min-height: 116px;
+  border-radius: 16px;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.van-nav-bar {
+  i {
+    color: var(--dark-fff, #595757) !important;
+  }
+}
+
+.bold {
+  font-weight: bolder;
+}

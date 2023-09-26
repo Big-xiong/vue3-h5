@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>youxi</title>
+    <g id="会员中心" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="youxi-2" transform="translate(-18.000000, -179.000000)">
+            <g transform="translate(18.000000, 179.000000)" id="youxi">
+                <rect id="矩形" class="help-icon-circle" x="0.5" y="0.5" width="25" height="25" rx="12.5"></rect>
+                <g id="形状" transform="translate(8.450000, 7.800000)">
+                    <g transform="translate(-0.000000, -0.000000)">
+                        <path d="M10.4,0.866666667 L10.4,10.4 L1.74416667,10.4 C0.78,10.4 0,9.62 0,8.65583333 L0,1.74416667 C0,0.78 0.78,0 1.74416667,0 L8.66666667,0 L8.66666667,6.93333333 L1.755,6.93333333 C1.2675,6.93333333 0.866666667,7.33416667 0.866666667,7.82166667 L0.866666667,8.645 C0.866666667,9.1325 1.2675,9.53333333 1.755,9.53333333 L9.53333333,9.53333333 L9.53333333,0.866666667 L10.4,0.866666667 Z M8.66666667,7.8 L1.73333333,7.8 L1.73333333,8.66666667 L8.66666667,8.66666667 L8.66666667,7.8 Z" class="help-icon-inner" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

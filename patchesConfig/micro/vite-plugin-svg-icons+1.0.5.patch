@@ -1,0 +1,15 @@
+diff --git a/node_modules/vite-plugin-svg-icons/dist/index.js b/node_modules/vite-plugin-svg-icons/dist/index.js
+index d57f089..a818bf7 100644
+--- a/node_modules/vite-plugin-svg-icons/dist/index.js
++++ b/node_modules/vite-plugin-svg-icons/dist/index.js
+@@ -5421,6 +5421,10 @@ async function createModuleCode(cache, svgoOptions, options) {
+        if (typeof window !== 'undefined') {
+          function loadSvg() {
+            let body = document.body;
++           let target = document.querySelector('div[data-name="vue_micro_app"]');
++           if (target) {
++                body = target.shadowRoot;
++           }
+            let svgDom = document.getElementById('${SVG_DOM_ID}');
+            if(!svgDom) {
+              svgDom = document.createElementNS('http://www.w3.org/2000/svg', 'svg');

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="22px" viewBox="0 0 23 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>-mockplus-</title>
+    <defs>
+        <path d="M17.798,9 C18.459,9 19,9.451 19,10.001 L19,10.001 L19,18.998 C19,19.549 18.459,20 17.798,20 L17.798,20 L2.202,20 C1.541,20 1,19.549 1,18.998 L1,18.998 L1,10.001 C1,9.451 1.541,9 2.202,9 L2.202,9 Z M10,11.5 C9.447,11.5 9,11.947 9,12.5 L9,12.5 L9,16.5 C9,17.053 9.447,17.5 10,17.5 C10.553,17.5 11,17.053 11,16.5 L11,16.5 L11,12.5 C11,11.947 10.553,11.5 10,11.5 Z M10,0 C11.104,0 12,0.896 12,2 L12,2 L17,2 C18.65,2 20,3.35 20,5 C20,6.65 18.65,8 17,8 L17,8 L3,8 C1.35,8 0,6.65 0,5 C0,3.35 1.35,2 3,2 L3,2 L8,2 C8,0.896 8.896,0 10,0 Z" id="path-1"></path>
+    </defs>
+    <g id="首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页_德晋贵宾厅_热门推荐" transform="translate(-186.000000, -1081.000000)">
+            <g id="bottom" transform="translate(0.000000, 1073.000000)">
+                <g id="-mockplus-" transform="translate(185.500000, 8.000000)">
+                    <g id="-mockplus-" transform="translate(1.000000, 0.000000)">
+                        <g id="Color/🎨C8A77F" transform="translate(1.000000, 1.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="蒙版" fill="#F79C1F" xlink:href="#path-1"></use>
+                            <g id="-mockplus-" mask="url(#mask-2)">
+                                <g transform="translate(-1.000000, -1.000000)" id="Color/🎨C8A77F">
+                                    <rect id="矩形备份-3-copy" fill="#4D4C4D" x="0" y="0" width="22" height="22"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

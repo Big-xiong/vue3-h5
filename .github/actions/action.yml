@@ -1,0 +1,26 @@
+# action.yml
+name: 'ossutil'
+description: 'aliyun ossutil'
+inputs:
+  endpoint:
+    required: true
+  target_dir:
+    required: true
+  dir:
+    required: true
+  id:
+    required: true
+  secret:
+    required: true
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args: 
+    - ${{ inputs.endpoint }}
+    - ${{ inputs.dir }}
+    - ${{ inputs.target_dir }}
+    - ${{ inputs.id }}
+    - ${{ inputs.secret }}

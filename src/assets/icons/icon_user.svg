@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>-mockplus-</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.000000 0 0 0 0 0.627451 0 0 0 0 0.690196 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="登录注册" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g id="登录—账号" transform="translate(-20.000000, -376.000000)">
+            <g id="#icon/user" transform="translate(20.000000, 376.000000)">
+                <g transform="translate(3.000000, 1.000000)">
+                    <path d="M13,12 C15.209139,12 17,13.790861 17,16 C17,18.209139 15.209139,20 13,20 L4,20 C1.790861,20 2.705415e-16,18.209139 0,16 C-2.705415e-16,13.790861 1.790861,12 4,12 L13,12 Z M8.5,0 C11.5375661,0 14,2.46243388 14,5.5 C14,8.53756612 11.5375661,11 8.5,11 C5.46243388,11 3,8.53756612 3,5.5 C3,2.46243388 5.46243388,0 8.5,0 Z" id="形状结合"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

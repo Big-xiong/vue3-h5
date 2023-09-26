@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!--head-tags-->
+  <script>
+    if (!window.location.hash) {
+      window.location = `${window.location.pathname}#hs-chat-open`
+    }
+  </script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+    }
+
+    #hubspot-messages-iframe-container {
+      z-index: 2147483645 !important;
+    }
+
+    .hide-close {
+      display: none;
+      position: fixed;
+      width: 100px;
+      height: 68px;
+      background: linear-gradient(245deg, rgb(80, 204, 204) 35%, rgb(69, 174, 202) 100%);
+      z-index: 2147483646;
+      right: 0;
+    }
+
+    .app-loading {
+      z-index: 2147483647;
+      position: fixed;
+      top: 40%;
+      left: 50%;
+      width: 30px;
+      height: 30px;
+      margin-left: -15px;
+      border: 2px solid transparent;
+      border-top-color: #62BF9D;
+      border-radius: 50%;
+      -webkit-animation: 1s app-loading linear infinite;
+      animation: 1s app-loading linear infinite;
+      position: relative;
+    }
+
+    @keyframes app-loading {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    .kefu {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: none;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app-loading"></div>
+  <div class="hide-close"></div>
+  <div class="kefu">
+    <iframe></iframe>
+  </div>
+  <script>
+    const app = document.querySelector('.app-loading');
+    const reg = /(src=['|"])([a-z\d\.\-\/])+/ig;
+    let params = getQueryVariable('params');
+    fetch('https://userapi.blizzwin.com/regionlist').then(res => res.json()).then(res => {
+      const target = res.data.find((item) => item.is_default === 1);
+      const [inte_region_id, inte_currency_id] = [target.id, target.currency_conf.default.id]
+      fetch(`https://userapi.blizzwin.com/siteinfo?merchant_no=50001&inte_region_id=${inte_region_id}&inte_currency_id=${inte_currency_id}`)
+        .then(res => res.json())
+        .then(async res => {
+          const { h5_kf, h5_kf_js, kf_online_type } = res.data
+          if (kf_online_type === 1) {
+            app.style.display = 'none';
+            document.querySelector('.kefu').style.display = 'block';
+            document.querySelector("iframe").src = `${h5_kf}${h5_kf.includes('referrer') ? '&' : '?'}params=${params}`;
+          } else {
+            if (h5_kf_js) {
+              const script = document.createElement('script');
+              const src = h5_kf_js.match(reg)?.[0]?.replace?.(/^src=['|"]/, '');
+              script.src = src;
+              let res;
+              let email = localStorage.getItem('email') ?? `${new Date().getTime()}@test.com`
+              localStorage.setItem('email', email)
+              if (params) {
+                params = JSON.parse(params.replace(/%22/g, '"'));
+                res = await fetch(`https://userapi.blizzwin.com/chat_token?email=${params.email === 'null' ? email : params.email}&firstname=${params.username === 'null' ? '' : params.username}&lastname=${params.mobile === 'null' ? '[No mobile number]' : params.mobile}`)
+                  .then(res => res.json())
+              }
+              document.body.appendChild(script);
+              window.hsConversationsSettings = {
+                loadImmediately: false,
+                identificationEmail: email,
+                identificationToken: res?.data?.token ?? ''
+              };
+              let timer = setInterval(() => {
+                window.HubSpotConversations?.widget?.load?.({ widgetOpen: true })
+                if (window.HubSpotConversations?.widget?.status?.()?.loaded) {
+                  app.style.display = 'none';
+                  document.querySelector('.hide-close').style.display = 'block';
+                  clearInterval(timer)
+                  // window.HubSpotConversations?.widget?.open?.()
+                }
+              }, 500)
+            }
+          }
+        });
+    });
+
+    function getQueryVariable(variable) {
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        if (pair[0] == variable) { return pair[1]; }
+      }
+      return false;
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="14px" viewBox="0 0 19 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 4</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.913725 0 0 0 0 0.819608 0 0 0 0 0.713725 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+        <filter id="filter-2">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="一级页面" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组-4" transform="translate(-287.000000, -257.000000)" filter="url(#filter-1)">
+            <g transform="translate(287.000000, 257.000000)">
+                <g filter="url(#filter-2)" id="球场备份">
+                    <g id="球场" fill="#000000" fill-rule="nonzero">
+                        <path d="M16.8946204,13.7658072 L2.05641951,13.7658072 C1.09918207,13.7658072 0.319513196,12.9630314 0.319513196,11.9777124 L0.319513196,1.90464033 C0.319513196,0.919321297 1.09918207,0.116545578 2.05641951,0.116545578 L16.8925794,0.116545578 C17.8498168,0.116545578 18.6294857,0.919321297 18.6294857,1.90464033 L18.6294857,11.9797868 C18.6294857,12.9651058 17.8518578,13.7658072 16.8946204,13.7658072 Z M2.05641951,1.09149283 C1.62168268,1.09149283 1.26654555,1.45657946 1.26654555,1.90464033 L1.26654555,11.9797868 C1.26654555,12.4278476 1.61964166,12.7929343 2.05641951,12.7929343 L16.8925794,12.7929343 C17.3273162,12.7929343 17.6824533,12.4278476 17.6824533,11.9797868 L17.6824533,1.90464033 C17.6824533,1.45657946 17.3293572,1.09149283 16.8925794,1.09149283 L2.05641951,1.09149283 Z" id="形状"></path>
+                    </g>
+                </g>
+                <line x1="1.26654555" y1="4.26914891" x2="17.6824533" y2="4.26914891" id="路径-10" stroke="#FFFFFF"></line>
+                <text id="1:2" font-family="DINCond-BoldAlternate" font-size="11" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="3.83029342" y="11.8475357">1:2</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

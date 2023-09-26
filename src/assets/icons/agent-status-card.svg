@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="345px" height="143px" viewBox="0 0 345 143" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组</title>
+    <defs>
+        <path d="M4,0 L341,0 C343.209139,-4.05812251e-16 345,1.790861 345,4 L345,139 C345,141.209139 343.209139,143 341,143 L4,143 C1.790861,143 2.705415e-16,141.209139 0,139 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="path-1"></path>
+    </defs>
+    <g id="代理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="我的" transform="translate(-15.000000, -144.000000)">
+            <g id="路径-2-+-路径蒙版" transform="translate(15.000000, 144.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="蒙版" fill="#1D153D" xlink:href="#path-1"></use>
+                <polygon id="路径-2" fill="#201747" mask="url(#mask-2)" points="138 -3.72673453 -4 127 -4 -6"></polygon>
+                <polygon id="路径" fill="#1F1644" mask="url(#mask-2)" points="101 -9 -4 92 -4 -3.72886642"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

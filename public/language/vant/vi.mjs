@@ -1,0 +1,81 @@
+export default {
+	name: 'Tên',
+	tel: 'Điện thoại',
+	save: 'cứu',
+	confirm: 'xác nhận',
+	cancel: 'Hủy bỏ',
+	delete: 'xóa bỏ',
+	complete: 'Kết thúc',
+	loading: 'Đang tải...',
+	telEmpty: 'Vui lòng điền vào điện thoại',
+	nameEmpty: 'Xin vui lòng điền tên của bạn',
+	nameInvalid: 'Vui lòng nhập tên chính xác',
+	confirmDelete: 'Bạn chắc chắn bạn muốn xóa nó',
+	telInvalid: 'Xin vui lòng nhập một số điện thoại hợp lệ',
+	vanCalendar: {
+		end: 'Kết thúc',
+		start: 'Bắt đầu',
+		title: 'Ngày chọn',
+		confirm: 'xác nhận',
+		startEnd: 'bắt đầu/kết thúc',
+		weekdays: ['ngày', 'một', 'hai', 'số ba', 'Bốn', 'năm', 'sáu'],
+		monthTitle: (year, month) => `${year}năm${month}mặt trăng`,
+		rangePrompt: (maxRange) => `Chọn số ngày không được vượt quá ${maxRange} bầu trời`,
+	},
+	vanCascader: {
+		select: 'xin vui lòng chọn',
+	},
+	vanContactCard: {
+		addText: 'Thêm địa chỉ liên hệ',
+	},
+	vanContactList: {
+		addText: 'Địa chỉ liên lạc mới',
+	},
+	vanPagination: {
+		prev: 'Trang trước',
+		next: 'Trang tiếp theo',
+	},
+	vanPullRefresh: {
+		pulling: 'Kéo xuống để làm mới...',
+		loosing: 'Phát hành để làm mới...',
+	},
+	vanSubmitBar: {
+		label: 'toàn bộ：',
+	},
+	vanCoupon: {
+		unlimited: 'Không có ngưỡng sử dụng',
+		discount: (discount) => `${discount}gập lại`,
+		condition: (condition) => `Đầy${condition}Meta-sẵn có`,
+	},
+	vanCouponCell: {
+		title: 'phiếu mua hàng',
+		tips: 'Không có sẵn',
+		count: (count) => `${count}Zhang có sẵn`,
+	},
+	vanCouponList: {
+		empty: 'Không có phiếu giảm giá',
+		exchange: 'trao đổi',
+		close: 'Không có phiếu giảm giá',
+		enable: 'Có sẵn',
+		disabled: 'không có sẵn',
+		placeholder: 'Vui lòng nhập mã phiếu giảm giá',
+	},
+	vanAddressEdit: {
+		area: 'khu vực',
+		postal: 'mã bưu điện',
+		areaEmpty: 'vui lòng chọn khu vực',
+		addressEmpty: 'Vui lòng điền vào địa chỉ chi tiết',
+		postalEmpty: 'Định dạng mã bưu chính không chính xác',
+		defaultAddress: 'Đặt làm địa chỉ giao hàng mặc định',
+		telPlaceholder: 'Số điện thoại di động của người nhận hàng',
+		namePlaceholder: 'Tên người nhận hàng',
+		areaPlaceholder: 'Chọn một tỉnh / thành phố / Khu vực',
+	},
+	vanAddressEditDetail: {
+		label: 'Địa chỉ nhà',
+		placeholder: 'Số đường phố, số phòng tầng và các thông tin khác',
+	},
+	vanAddressList: {
+		add: 'Thêm địa chỉ',
+	},
+};
